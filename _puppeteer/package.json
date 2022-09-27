@@ -1,0 +1,29 @@
+{
+  "name": "puppetter_jest_basics",
+  "version": "1.0.0",
+  "description": "integrate Jest with Puppetter for automation test",
+  "main": "index.js",
+  "author": "Erez asmara (c)",
+  "license": "ISC",
+  "scripts": {
+    "test:all": "jest --config ./configuration/jest.config.js --runInBand",
+    "test:apis":"npm run test:all -t api",
+    "test:ui":"npm run test:all -t ui",
+    "test:visual": "export HEADLESS=false && export SLOWMO=30 && npm run test:all -t ui",
+    "test:incognito":"export INCOGNITO=true && npm run test:visual",
+    "test:debug": "export DEVTOOLS=true && export HEADLESS=false && npm run test:all --detectOpenHandles -t ui",
+    "test:parallel":"export INCOGNITO=true && export HEADLESS=false &&  jest --config ./configuration/jest.config.js"
+  },
+  "keywords": [
+    "puppetter",
+    "jest",
+    "Automation",
+    "tests"
+  ],
+  "devDependencies": {
+    "jest": "^27.5.0",
+    "jest-html-reporters": "^3.0.5",
+    "puppeteer": "^13.2.0",
+    "supertest": "^6.2.2"
+  }
+}

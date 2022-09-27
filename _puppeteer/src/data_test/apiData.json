@@ -1,0 +1,12 @@
+{
+    "firstname" : "erez",
+    "lastname" : "asmara",
+    "totalprice" : 333,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2018-01-01",
+        "checkout" : "2019-02-02"
+    },
+    "additionalneeds" : "Breakfast"
+
+}
